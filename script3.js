@@ -1,6 +1,4 @@
 function fizzbuzz(){
-    var string3;
-    var string5;
     var msg;
 
     for(var i = 1;i <= 100; i++){
@@ -9,8 +7,8 @@ function fizzbuzz(){
         var flag15 = 0;
         var quotient3 = i / 3;
         var quotient5 = i / 5;
-        string3 = quotient3.toString;
-        string5 = quotient5.toString;
+        var string3 = quotient3.toString;
+        var string5 = quotient5.toString;
 
         if(string3.length <= 2){
             flag3 = 1;
@@ -20,9 +18,23 @@ function fizzbuzz(){
             flag5 = 1;
         }
 
-        if(flag3 == 1 && flag5 == 1){}
+        if(flag3 == 1 && flag5 == 1){
+            msg = "fizzbuzz";
+        }
 
-       
+        else if(flag3 == 1){
+            msg = "fizz";
+        }
+
+        else if(flag5 == 1){
+            msg = "buzz";
+        }
+
+        else{
+            msg = i;
+        }
+
+        console.log(msg);
     }
 }
 
